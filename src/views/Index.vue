@@ -1,5 +1,5 @@
 <template>
     <div class="index">
-        fwefwe
+        bla
     </div>
 </template>
