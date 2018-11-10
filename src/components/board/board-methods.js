@@ -1,4 +1,20 @@
 export default {
+    rollTheDices(rollTime) {
+        let self = this;
+        self.rolling = true;
+        if (rollTime < 10) {
+            console.log('Rolling!');
+            this.dice1Value = Math.floor(Math.random() * 6);
+            this.dice2Value = Math.floor(Math.random() * 6);
+            setTimeout(function () {
+                self.rollTheDices(rollTime + 1);
+            }, 100);
+        } else {
+            self.rolling = false;
+            console.log('Done rolling!');
+            return
+        }
+    },
     buildBoard() {
         for (let a = 0; a < 27; a++) {
             this.grid.push([]);

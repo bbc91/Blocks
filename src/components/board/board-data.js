@@ -1,5 +1,8 @@
 module.exports = function (self) {
     return {
-        grid: []
+        grid: [],
+        rolling: false,
+        dice1Value: null,
+        dice2Value: null,
     }
 };
