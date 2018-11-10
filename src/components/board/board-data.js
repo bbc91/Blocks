@@ -1,4 +1,4 @@
-module.exports = function (self) {
+export default function (self) {
     return {
         grid: [],
         rolling: false,
