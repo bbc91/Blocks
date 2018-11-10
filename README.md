@@ -1,4 +1,6 @@
-# blocks
+# Blocks
+
+### [Demo](http://paper-wars.surge.sh)
 
 ## Project setup
 ```
