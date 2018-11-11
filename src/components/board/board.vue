@@ -10,17 +10,14 @@
                 <div v-if="dice2Value != null" class="dice" v-html="'&#x268' + dice2Value + ';'"></div>
             </div>
         </div>
-        <div>
-            <h3 id="phase">{{(gamePhase === 1) ? "Phase 1" : "Phase 2"}}</h3>
-            <div id="board">
-                <div class="row" v-for="(row, index) in grid">
-                    <div :class="{'player1': (block.owner && block.owner.id === players[0].id), 'player2': (block.owner && block.owner.id === players[1].id)}"
-                         class="block"
-                         v-for="(block, index2) in row">
-                        <div v-if="block.selected">X</div>
-                        <!--<div v-if="block.owner">{{block.owner.name}}</div>-->
-                        <span>{{block.position.x}}:{{block.position.y}}</span>
-                    </div>
+        <div id="board">
+            <div class="row" v-for="(row, index) in grid">
+                <div :class="{'player1': (block.owner && block.owner.id === players[0].id), 'player2': (block.owner && block.owner.id === players[1].id)}"
+                     class="block"
+                     v-for="(block, index2) in row">
+                    <div v-if="block.selected">X</div>
+                    <!--<div v-if="block.owner">{{block.owner.name}}</div>-->
+                    <span>{{block.position.x}}:{{block.position.y}}</span>
                 </div>
             </div>
         </div>
@@ -79,7 +76,7 @@
 
 						if (this.players[this.playerTurnIndex].firstTurn) {
 							self.players[self.playerTurnIndex].firstTurn = false;
-                            
+
 						}
 
 						self.selectToOwner();
@@ -92,14 +89,14 @@
 
 			let player1 = {
 				id: 1,
-				name: "Player 1",
+				name: "Gogo",
 				startingPoint: [0, 0],
 				firstTurn: true,
 			};
 
 			let player2 = {
 				id: 2,
-				name: "Player 2",
+				name: "Miti",
 				startingPoint: [this.grid.length - 1, this.grid[0].length - 1],
 				firstTurn: true,
 			};
