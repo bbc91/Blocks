@@ -1,8 +1,11 @@
 export default function (self) {
-    return {
-        grid: [],
-        rolling: false,
-        dice1Value: null,
-        dice2Value: null,
-    }
+	return {
+		gamePhase: 1,
+		grid: [],
+		playerTurnIndex: null,
+		rolling: false,
+		dice1Value: null,
+		dice2Value: null,
+		players: []
+	}
 };

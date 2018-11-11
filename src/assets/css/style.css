@@ -150,3 +150,21 @@ h1 {
 .disabled {
     cursor: not-allowed;
 }
+
+#playerTurn {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+#phase {
+    text-align: center;
+    font-size: 20px;
+}
+
+.player1 {
+    background: #243fff;
+}
+
+.player2 {
+    background: #a91b7d;
+}
